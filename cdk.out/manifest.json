@@ -1,0 +1,250 @@
+{
+  "version": "22.0.0",
+  "artifacts": {
+    "ecb-exchange-rates.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ecb-exchange-rates.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ecb-exchange-rates": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ecb-exchange-rates.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/79333482c698f6e8bcc53592fe1ee4e286c76b6e14fcc016741223caa92867c3.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ecb-exchange-rates.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ecb-exchange-rates.assets"
+      ],
+      "metadata": {
+        "/ecb-exchange-rates/table-ecb-exchange-rates/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "tableecbexchangerates005A787E"
+          }
+        ],
+        "/ecb-exchange-rates/update-ecb-exchange-rates/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateecbexchangeratesServiceRole82B90291"
+          }
+        ],
+        "/ecb-exchange-rates/update-ecb-exchange-rates/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateecbexchangeratesServiceRoleDefaultPolicyCD77063D"
+          }
+        ],
+        "/ecb-exchange-rates/update-ecb-exchange-rates/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateecbexchangeratesA57BE1BD"
+          }
+        ],
+        "/ecb-exchange-rates/update-ecb-exchange-rates/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "updateecbexchangeratesLogRetention1866C204"
+          }
+        ],
+        "/ecb-exchange-rates/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/ecb-exchange-rates/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/ecb-exchange-rates/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/ecb-exchange-rates/get-ecb-exchange-rates/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getecbexchangeratesServiceRole47BAF6F7"
+          }
+        ],
+        "/ecb-exchange-rates/get-ecb-exchange-rates/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getecbexchangeratesServiceRoleDefaultPolicy41466F8C"
+          }
+        ],
+        "/ecb-exchange-rates/get-ecb-exchange-rates/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getecbexchangerates70E614A9"
+          }
+        ],
+        "/ecb-exchange-rates/get-ecb-exchange-rates/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "getecbexchangeratesLogRetention4030E97F"
+          }
+        ],
+        "/ecb-exchange-rates/ecb-exchange-rates-update-scheduler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecbexchangeratesupdatescheduler03FA37B3"
+          }
+        ],
+        "/ecb-exchange-rates/ecb-exchange-rates-update-scheduler/AllowEventRuleecbexchangeratesupdateecbexchangerates0AE420D7": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecbexchangeratesupdateschedulerAllowEventRuleecbexchangeratesupdateecbexchangerates0AE420D749FA148F"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangerates88EA32F8"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesDeploymentC347F48E148b42f09fe3e875f2cb3230ecc72729"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesDeploymentStageprod760EA48E"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesEndpoint68C2FB29"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Default/ecbexchangerates/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesecbexchangerates33F8873E"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Default/ecbexchangerates/GET/ApiPermission.ecbexchangeratesapiecbexchangerates5F3B4402.GET..ecbexchangerates": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesecbexchangeratesGETApiPermissionecbexchangeratesapiecbexchangerates5F3B4402GETecbexchangerates0C5EAF7A"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Default/ecbexchangerates/GET/ApiPermission.Test.ecbexchangeratesapiecbexchangerates5F3B4402.GET..ecbexchangerates": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesecbexchangeratesGETApiPermissionTestecbexchangeratesapiecbexchangerates5F3B4402GETecbexchangerates8017005F"
+          }
+        ],
+        "/ecb-exchange-rates/api-ecb-exchange-rates/Default/ecbexchangerates/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiecbexchangeratesecbexchangeratesGET722857D6"
+          }
+        ],
+        "/ecb-exchange-rates/init-ecb-echange-rates/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initecbechangeratesServiceRoleBD89B240"
+          }
+        ],
+        "/ecb-exchange-rates/init-ecb-echange-rates/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initecbechangeratesServiceRoleDefaultPolicyEC09406B"
+          }
+        ],
+        "/ecb-exchange-rates/init-ecb-echange-rates/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initecbechangerates84913F41"
+          }
+        ],
+        "/ecb-exchange-rates/init-ecb-echange-rates/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initecbechangeratesLogRetention2745FC3C"
+          }
+        ],
+        "/ecb-exchange-rates/init-ecb-echange-rates/Trigger/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initecbechangeratesTriggerB2010146"
+          }
+        ],
+        "/ecb-exchange-rates/init-ecb-echange-rates/CurrentVersion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initecbechangeratesCurrentVersion31329E1Af36e089f1528ab5d7873175479c4e6dd"
+          }
+        ],
+        "/ecb-exchange-rates/AWSCDK.TriggerCustomResourceProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKTriggerCustomResourceProviderCustomResourceProviderRoleE18FAF0A"
+          }
+        ],
+        "/ecb-exchange-rates/AWSCDK.TriggerCustomResourceProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKTriggerCustomResourceProviderCustomResourceProviderHandler97BECD91"
+          }
+        ],
+        "/ecb-exchange-rates/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ecb-exchange-rates/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/ecb-exchange-rates/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ecb-exchange-rates/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ecb-exchange-rates"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
